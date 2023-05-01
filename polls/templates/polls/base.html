@@ -21,13 +21,13 @@
         <div class="container-fluid justify-content-center">
             <ul class="nav navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'polls:index' %}">Active Polls</a>
+                    <a class="nav-link" href="{% url 'polls:index' %}">Landing Page</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'polls:deepthoughts' %}">New Thought</a>
+                    <a class="nav-link" href="{% url 'polls:deepthoughts' %}">Check-In</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'polls:list' %}">Deep Thoughts</a>
+                    <a class="nav-link" href="{% url 'polls:list' %}">Public List of Checked-In Students</a>
                 </li>
             </ul>
         </div>
@@ -36,8 +36,8 @@
     {% block content %} {% endblock content %}
     </div>
     <div class="footer bg-steel navbar-dark">
-        <span class="footer-item">Author: Ishan Koroth</span>
-        <span class="footer-item">&#169; ikoroth02@gmail.com</span>
+        <span class="footer-item">Authors: Ishan Koroth, Hunter Carlton</span>
+        <span class="footer-item">&#169; ik4vrb@virginia.edu</span>
         <span class="footer-item footer-last"><a class="footer-link" href="{% url 'polls:credits' %}">Credits: Corey Schafer, W3C Schools</a></span>
     </div>
 </body>
