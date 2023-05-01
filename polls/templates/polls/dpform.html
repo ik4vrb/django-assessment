@@ -1,0 +1,23 @@
+{% extends "polls/base.html" %}
+{% block content %}
+{% load static %}
+
+<form action="{% url 'polls:newdp' %}" method="post">
+{% csrf_token %}
+    <h3>Enter your deep thought...</h3>
+    {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+    <label for="title">Title</label>:&nbsp;
+    <input type="text" name="title" id="title" maxlength="200" size="80">
+    <br>
+    <br>
+    <label for="content">Deep Thought</label>:&nbsp;
+    <br>
+    <textarea name="content" id="content" cols="85" rows="5"></textarea>
+<br>
+<input class="btn btn-secondary" type="submit" value="Submit">
+</form>
+<br>
+See all other deepthoughts <a href="{% url 'polls:list' %}">here</a>.
+<br>
+
+{% endblock content %}
