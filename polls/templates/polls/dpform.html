@@ -6,18 +6,18 @@
 {% csrf_token %}
     <h3>Enter your deep thought...</h3>
     {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
-    <label for="title">Title</label>:&nbsp;
+    <label for="title">First and Last Name</label>:&nbsp;
     <input type="text" name="title" id="title" maxlength="200" size="80">
     <br>
     <br>
-    <label for="content">Deep Thought</label>:&nbsp;
+    <label for="content">Date and Time of Check-In</label>:&nbsp;
     <br>
     <textarea name="content" id="content" cols="85" rows="5"></textarea>
 <br>
 <input class="btn btn-secondary" type="submit" value="Submit">
 </form>
 <br>
-See all other deepthoughts <a href="{% url 'polls:list' %}">here</a>.
+Once you have checked-in for the day, verify it here: <a href="{% url 'polls:list' %}">here</a>.
 <br>
 
 {% endblock content %}
