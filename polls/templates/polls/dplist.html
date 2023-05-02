@@ -1,6 +1,9 @@
 {% extends "polls/base.html" %}
 {% block content %}
 {% load static %}
+<head>
+    <meta http-equiv="refresh" content="30">
+</head>
 
 {% if all_deepthoughts %}
     {% for deepthought in all_deepthoughts %}
