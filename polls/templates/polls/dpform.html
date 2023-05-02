@@ -4,7 +4,7 @@
 
 <form action="{% url 'polls:newdp' %}" method="post">
 {% csrf_token %}
-    <h3>Enter your deep thought...</h3>
+    <h3>Enter your name and date for the check-in...</h3>
     {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
     <label for="title">First and Last Name</label>:&nbsp;
     <input type="text" name="title" id="title" maxlength="200" size="80">
