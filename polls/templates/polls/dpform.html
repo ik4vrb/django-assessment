@@ -6,13 +6,13 @@
 {% csrf_token %}
     <h2>Please check-in...</h2>
     {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
-    <table border=0 cellspacing=5 >
+    <table border=0 cellspacing=10 >
     <tr>
-    <td><label for="title">Your Name</label></td>
+    <td align="right"><label for="title">Name:</label></td>
     <td><input type="text" name="title" id="title" maxlength="100" size="30">
     </tr>
     <tr>
-    <td><label for="content">Date & Time</label></td>
+    <td align="right"><label for="content">Time:</label></td>
     <td><input type="text" name="content" id="content" maxlength="80" size="30"></td>
 </tr>
 <tr>
