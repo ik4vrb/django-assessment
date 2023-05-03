@@ -4,21 +4,22 @@
 
 <form action="{% url 'polls:newdp' %}" method="post">
 {% csrf_token %}
-    <h3>Enter your name and date for the check-in...</h3>
+    <h2>Please check-in...</h2>
     {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
-    <label for="title">First and Last Name</label>:&nbsp;
-    <input type="text" name="title" id="title" maxlength="200" size="80">
-    <br>
-    <br>
-    <label for="content">Date and Time of Check-In</label>:&nbsp;
-    <br>
-    <input type="text" name="content" id="content" maxlength="80" size="80">
-<br>
-<input class="btn btn-secondary" type="submit" value="Submit">
+    <table border=0 cellspacing=5 >
+    <tr>
+    <td><label for="title">Your Name</label></td>
+    <td><input type="text" name="title" id="title" maxlength="200" size="60">
+    </tr>
+    <tr>
+    <td><label for="content">Date & Time</label></td>
+    <td><input type="text" name="content" id="content" maxlength="80" size="60"></td>
+</tr>
+<tr>
+<td colspan=2><input class="btn btn-secondary" type="submit" value="Submit"></td>
+</tr>
+</table>
 </form>
-<br>
-Fill out the form and hit submit to check-in. Once you have checked-in for the day, verify it here: <a href="{% url 'polls:list' %}">here</a>.
-<br>
 
 <script>
     window.onload = function() {
