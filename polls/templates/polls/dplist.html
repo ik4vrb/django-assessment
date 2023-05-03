@@ -8,14 +8,10 @@
 {% if all_deepthoughts %}
     {% for deepthought in all_deepthoughts %}
     <article class="media content-section">
-        <h2>{{ deepthought.title }}</h2>
-        <p>{{ deepthought.content }}</p>
+        <span style="font-weight: bold; font-size: 2em;">{{ deepthought.title }}</span>&nbsp;@ {{ deepthought.content }}
     </article>
     {% endfor %}
 {% else %}
     <p>No one has checked in yet.</p>
 {% endif %}
-<br>
-If you have successfully checked-in and it is displayed here, congrats! Otherwise, click <a href="{% url 'polls:deepthoughts' %}">here</a>.
-<br>
 {% endblock content %}
