@@ -22,7 +22,8 @@ Fill out the form and hit submit to check-in. Once you have checked-in for the d
 
 <script>
     window.onload = function() {
-    document.getElementById("content").value = Date.now().toString();
+    var now = new Date();
+    document.getElementById("content").value = d.toLocaleDateString() + " " + d.toLocaleTimeString();
     return true;
     }
 </script>
