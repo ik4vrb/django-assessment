@@ -6,7 +6,7 @@
 {% csrf_token %}
     <h2>Please check-in...</h2>
     {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
-    <table border=0 cellspacing=10 >
+    <table border=0 cellpadding="5" >
     <tr>
     <td align="right"><label for="title">Name:</label></td>
     <td><input type="text" name="title" id="title" maxlength="100" size="30">
